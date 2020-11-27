@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+    <header class="header mt-4">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-3">
+					<img src="images/logo.png" class="logo" alt="">
+				</div>
+				<div class="col-lg-8 ml-auto">
+					<nav>
+						<ul id="menu" class="menu mt-5 d-flex flex-wrap justify-content-between">
+							<li class="menu-item">
+								<a href="index.html" class="link">Home</a>
+							</li>
+							<li class="menu-item">
+								<a href="about.html" class="link">About us</a>
+							</li>
+							<li class="menu-item">
+								<a href="#" class="link">Portfolio</a>
+							</li>
+							<li class="menu-item">
+								<a href="#" class="link">Services</a>
+							</li>
+							<li class="menu-item">
+								<a href="#" class="link">Blog</a>
+							</li>
+							<li class="menu-item active">
+								<a href="contact.html" class="link">Contact Us</a>
+							</li>
+							<li class="menu-icon">
+								<a href="javascript:void(0);" onclick="menuFunc()">&#9776;</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+	</header>
+    
+    <section class="contact">
+        <div class="container">
+            <h4 class="main-title text-center mt-4">Connect With Us</h4>
+            <div class="line"></div>
+            <p class="main-text text-center font-weight-bold mx-auto mb-5" style="font-size: 16px; max-width: 60%;">34/1 Zhandosov St KZ, Almaty, DC 20500, The Republic of Kazakhstan. Tel: (202) 456-1111</p>
+            <form action="#" class="form-group">
+                <div class="row form-group mx-auto justify-content-around">
+                    <input class="form-control mb-3" type="text" placeholder="Your Name *" required="required">
+                    <input class="form-control" type="email" placeholder="Your Email *" required="required">
+                </div>
+                <textarea name="contact-form-message" id="contact-form-message" cols="30" rows="10" class="form-control" placeholder="Your Message *"></textarea>
+                <button class="form-control btn-warning border border-dark font-weight-bold text-uppercase mx-auto mt-4">Send Message</button>
+            </form>
+        </div>
+	</section>
+	
+	<div class="map mb-5">
+		<div class="container">
+			<h4 class="main-title text-center mt-4 mb-4">Location</h4>
+			<div id="map" class="w-100"></div>
+		</div>
+	</div>
+
+    <footer class="footer pb-2">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-10">
+					<div class="footer-block">
+						<ul class="navigation d-flex flex-wrap mt-4">
+							<li class="navigation-item mr-2"><a href="index.html">Home</a></li>
+							<li class="navigation-item mr-2"><a href="#">|</a></li>
+							<li class="navigation-item mr-2"><a href="about.html">About Us</a></li>
+							<li class="navigation-item mr-2"><a href="#">|</a></li>
+							<li class="navigation-item mr-2"><a href="#">Portfolio</a></li>
+							<li class="navigation-item mr-2"><a href="#">|</a></li>
+							<li class="navigation-item mr-2"><a href="#">Services</a></li>
+							<li class="navigation-item mr-2"><a href="#">|</a></li>
+							<li class="navigation-item mr-2"><a href="#">Blog</a></li>
+							<li class="navigation-item mr-2"><a href="#">|</a></li>
+							<li class="navigation-item mr-2"><a href="contact.html">Contact Us</a></li>
+						</ul>
+						<div class="mt-1 mb-2">
+							<p>© 2010 CreativeStudio. All Rights Reserved</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-2 ml-auto">
+					<div class="footer-logo mt-4">
+						<img src="images/logo-footer.png" alt="">
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<script>
+		function initMap() {
+			var uluru = {lat: 43.234975, lng: 76.909646};
+			var map = new google.maps.Map(
+				document.getElementById('map'), {zoom: 10, center: uluru});
+			var marker = new google.maps.Marker({position: uluru, map: map});
+		}
+	</script>
+	<script async defer
+    	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDKRJyaWMT-jvx36xRhFvMB_RaBl7uyIJQ&callback=initMap">
+    </script>
+	<script src="script.js"></script>
+</body>
+</html>
